@@ -9,7 +9,7 @@ subject.subscribe({
   next: (v) => console.log(`observerB: ${v}`)
 });
 
-subject.next(1);
+subject.next(Math.random());
 subject.next(2);
 
 // Logs:
@@ -18,32 +18,7 @@ subject.next(2);
 // observerA: 2
 // observerB: 2
 
-/*
-import { Observable } from 'rxjs';
 
-const observable = new Observable(subscriber => {
-  subscriber.next(1);
-  subscriber.next(2);
-  subscriber.next(3);
-  setTimeout(() => {
-    subscriber.next(4);
-    subscriber.complete();
-  }, 1000);
-});
-
-console.log('just before subscribe');
-observable.subscribe({
-  next(x) { console.log('got value ' + x); },
-  error(err) { console.error('something wrong occurred: ' + err); },
-  complete() { console.log('done'); }
-});
-observable.subscribe({
-  next(x) { console.log('2nd got value ' + x); },
-  error(err) { console.error('something wrong occurred: ' + err); },
-  complete() { console.log('done'); }
-});
-console.log('just after subscribe');
-*/
 /*
 // basic example
 var { of } = require('rxjs');
