@@ -1,0 +1,20 @@
+{
+  "name": "rxjstesting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server-start": "json-server  db.json",
+    "start": "ts-node index.ts"
+
+  },
+  "dependencies": {
+    "@types/node": "^12.7.5",
+    "json-server": "^0.15.1",
+    "preact": "^8.5.2",
+    "rxjs": "^6.5.3",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
